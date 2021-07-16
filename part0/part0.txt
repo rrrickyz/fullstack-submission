@@ -1,0 +1,119 @@
+0.4:
+
+
+
+Note over browser:
+
+Browser posts a note
+
+
+
+Browser -> server: HTTP POST  https://studies.cs.helsinki.fi/exampleapp/new_note
+
+Server --> browser: HTML-code
+
+
+
+Note over browser:
+
+Browser requests notes.html
+
+
+
+Browser -->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+
+Server --> browser: HTML-code
+
+Browser --> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+Server --> browser: main.css
+
+Browser --> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+
+Server --> browser: main.js
+
+
+
+Note over browser:
+
+Browser starts executing js-code that requests JSON data from server
+
+
+
+Browser --> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+Server --> browser: data.json
+
+
+
+Note over browser:
+
+Browser executes the event handler that renders notes to display
+
+
+
+
+
+0.5:
+
+
+
+Note over browser:
+
+Browser requests a note
+
+
+
+Browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+
+Server -> Browser: HTML-code
+
+Browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+Server -> browser: main.css
+
+Browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+
+Server -> browser: spa.js
+
+
+
+Note over browser:
+
+browser starts executing js-code that requests JSON data from server
+
+
+
+Browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+Server --> browser: data.json
+
+
+
+Note over browser:
+
+Browser executes the event handler that renders notes to display
+
+
+
+
+
+0.6:
+
+
+
+Note over browser:
+
+Browser posts new note as JSON-data containing both the content and the timestamp to new_note_spa, server responds with 201 created. The browser stays on the same page.
+
+Browser uses the JavaScript code it fetched from the server: the event handler creates a new note, adds it to the note list, rerenders the note list on the page, and sends the new note to the server.
+
+
+
+Browser -> server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+
+
+
+
+ 
