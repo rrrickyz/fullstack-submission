@@ -19,10 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rrrickyz/fullstack-submission/tree/main/part2/phonebook"
-  },
+
   "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
